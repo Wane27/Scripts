@@ -1,4 +1,4 @@
-## This script gathers user input for manufacturing lines. In this example, the netowrking inforamtion follows a pattern based on site and line information
+:: This script gathers user input for manufacturing lines. In this example, the netowrking inforamtion follows a pattern based on site and line information
 
 
 @echo off

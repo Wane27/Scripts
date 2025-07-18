@@ -21,63 +21,63 @@ IF "%site%"=="4" (
 )
 
 
-set ECSPC=10.%site%.2%side%0.%line%
+set Part1=10.%site%.2%side%0.%line%
 
 cls
-Echo !ECSPC!
-Echo Response from ECSPC:
+Echo !Part1!
+Echo Response from Part1:
 
 
-ping !ECSPC! | findstr /R /C:"Packets: *Sent" /C:"Lost"
+ping !Part1! | findstr /R /C:"Packets: *Sent" /C:"Lost"
 
 pause
 
-set Extr=10.%site%.2%side%1.%line%
+set Part2=10.%site%.2%side%1.%line%
 cls
-Echo !Extr!
-Echo Response from Extrusion Nat:
+Echo !Part2!
+Echo Response from Part2:
 
-ping !Extr! | findstr /R /C:"Packets: *Sent" /C:"Lost"
+ping !Part2! | findstr /R /C:"Packets: *Sent" /C:"Lost"
 
 pause
 
-set Cal=10.%site%.2%side%2.%line%
+set Part3=10.%site%.2%side%2.%line%
 cls
-Echo !Cal!
-Echo Response from Cal Nat:
+Echo !Part3!
+Echo Response from Part3:
 
-ping !Cal! | findstr /R /C:"Packets: *Sent" /C:"Lost"
+ping !Part3! | findstr /R /C:"Packets: *Sent" /C:"Lost"
 
 pause
 
-set Puller=10.%site%.2%side%3.%line%
+set Part4=10.%site%.2%side%3.%line%
 cls
-Echo !Puller!
-Echo Response from Puller Nat:
+Echo !Part4!
+Echo Response from Part4:
 
-ping !Puller! | findstr /R /C:"Packets: *Sent" /C:"Lost"
+ping !Part4! | findstr /R /C:"Packets: *Sent" /C:"Lost"
 
 pause
 
-set /a natside=%side%+3
+set /a side2=%side%+3
 
-set NatRouter=10.%site%.25%natside%.%line%
+set Part5=10.%site%.25%side2%.%line%
 cls
-Echo !NatRouter!
-Echo Response from Nat Router:
+Echo !Part5!
+Echo Response from Part5:
 
-ping !NatRouter! | findstr /R /C:"Packets: *Sent" /C:"Lost"
+ping !Part5! | findstr /R /C:"Packets: *Sent" /C:"Lost"
 
 pause
 
-set Printer=10.%site%.2%side%8.%line%
+set Part6=10.%site%.2%side%8.%line%
 
 cls
-Echo !Printer!
-Echo Response from Zebra Printer:
+Echo !Part6!
+Echo Response from Part6
 
 
-ping !Printer! | findstr /R /C:"Packets: *Sent" /C:"Lost"
+ping !Part6! | findstr /R /C:"Packets: *Sent" /C:"Lost"
 
 pause
 
